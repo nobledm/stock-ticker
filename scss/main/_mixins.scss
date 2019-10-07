@@ -1,0 +1,5 @@
+@mixin heading($size, $mb, $line-height: 1.5rem) {
+    font-size: $size;
+    margin-bottom: $mb;
+    line-height: $line-height;
+}

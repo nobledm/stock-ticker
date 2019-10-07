@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="a simple stock ticker">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stock Ticker</title>
+    <link rel="stylesheet" href="./css/styles.min.css">
+</head>
+<body>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    <main>
+        <h1>Stock Ticker</h1>
+
+        <section>
+            <form class="stock-checker">
+                <div class="lookup">
+                    <label for="symbol">Enter a Symbol</label>
+                    <input type="text" id="symbol" name="symbol" />
+                </div>
+
+                <button type="submit">Search</button>
+
+                <div class="output-options">
+                    <input type="checkbox" id="history" name="history" />
+                    <label for="history">View Previous 5 Days</label>
+                </div>
+            </form>
+
+            <p class="error"></p>
+            <small>*Restricted to 5 requests per min</small>
+        </section>
+    
+        <section>
+            <h2>Report</h2>
+            
+            <div class="stock-report">
+                <!-- report template inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/vendor/handlebars.runtime-v4.3.1.js"></script>
+    <script src="./js/dist/templates.js"></script>
+    <script src="./js/dist/main.js"></script>
+</body>
+</html>

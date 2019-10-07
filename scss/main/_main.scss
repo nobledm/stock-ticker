@@ -1,0 +1,59 @@
+body {
+    font-size: 100%;
+    font-family: sans-serif;
+    color: $midnight;
+    line-height: 1.5;
+    width: 96%;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 1.5rem 0 3rem;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+section:first-of-type {
+    background: $midnight;
+    border-radius: 0.625rem;
+    padding: 0.75rem 1rem;
+    width: 15.3125rem;
+    margin-right: 3rem;
+    color: #eee;
+}
+section:last-of-type {
+    width: calc(100% - (15.3125rem + 3rem));
+}
+
+.error {
+    margin-top: 1.5rem;
+    height: 3rem;
+    color: $red;
+}
+
+small {
+    color: $off-white;
+}
+
+ul,
+.symbol {
+    margin-bottom: 1.5rem;
+}
+
+.symbol,
+.date {
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 43.75rem) {
+    .stock-report {
+        display: flex;
+        flex-wrap: wrap;
+    
+        ul {
+            flex: 50%;
+        }
+    }
+}

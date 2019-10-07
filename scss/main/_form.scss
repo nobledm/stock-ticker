@@ -1,0 +1,41 @@
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input[type="text"],
+button {
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+    display: block;
+    border: 1px solid $grey;
+    background-color: $white;
+    line-height: 3rem;
+    font-size: 1.44rem;
+    width: 7.25rem;
+    padding: 0 0.5rem;
+    margin-right: 1rem;
+}
+
+button {
+    border: none;
+    border-radius: 0.125rem;
+    text-transform: uppercase;
+    line-height: 3rem;
+    width: calc(100% - (7.25rem + 1rem));
+    margin-top: 1.5rem;
+    background: $orange;
+    color: $dark-grey;
+    font-weight: bold;
+    cursor: pointer;
+    
+    &:hover {
+        background: darken($orange, 10%);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

@@ -1,0 +1,18 @@
+h1,
+h2,
+h3 {
+    flex: 1 1 100%;
+}
+
+h1 {
+    @include heading($h1, 1.5rem, 3rem);
+}
+
+h2 {
+    @include heading($h2, 3rem, 3rem);
+    border-bottom: 2px solid $orange;
+}
+
+h3 {
+    @include heading($h3, 0);
+}

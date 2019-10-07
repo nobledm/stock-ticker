@@ -1,0 +1,29 @@
+{
+  "name": "stock-ticker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "compile": "npx babel js/src/main.js -o js/dist/main.js --plugins=babel-plugin-transform-modules-iife",
+    "handlebars": "npx handlebars js/src/templates/ -f js/dist/templates.js -k each",
+    "build": "npm run compile && npm run handlebars"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-plugin-transform-modules-iife": "^1.0.0",
+    "handlebars": "^4.4.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "babel-plugin-transform-modules-iife"
+    ]
+  }
+}
