@@ -47,7 +47,7 @@
 
 
   var displayError = function displayError(message) {
-    document.querySelector(".error").innerText = message;
+    return document.querySelector(".error").innerText = message;
   };
   /**
    * Event listener on form submit that fetches the API information and

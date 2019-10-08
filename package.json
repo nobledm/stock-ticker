@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "compile": "npx babel js/src/main.js -o js/dist/main.js --plugins=babel-plugin-transform-modules-iife",
+    "sass": "npx sass scss/styles.scss css/styles.min.css --style compressed",
+    "babel": "npx babel js/src/main.js -o js/dist/main.js --plugins=babel-plugin-transform-modules-iife",
     "handlebars": "npx handlebars js/src/templates/ -f js/dist/templates.js -k each",
-    "build": "npm run compile && npm run handlebars"
+    "build": "npm run sass && npm run babel && npm run handlebars"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +17,8 @@
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
     "babel-plugin-transform-modules-iife": "^1.0.0",
-    "handlebars": "^4.4.0"
+    "handlebars": "^4.4.0",
+    "sass": "^1.23.0"
   },
   "babel": {
     "presets": [
